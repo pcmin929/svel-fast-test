@@ -1,9 +1,6 @@
 pipeline {
     agent any
     
-    tools {
-        maven 'my_maven'
-    }
     environment {
         GITNAME = 'pcmin929'            
         GITEMAIL = 'pcmin929@gmail.com' 
