@@ -32,9 +32,7 @@ pipeline {
         }
         
         
-     
-            }
-        }
+        
         stage('image build') {
             steps {
                 sh "docker build -t ${DOCKERHUB}:${currentBuild.number} ."
