@@ -4,8 +4,8 @@ pipeline {
     environment {
         GITNAME = 'pcmin929'            
         GITEMAIL = 'pcmin929@gmail.com' 
-        GITWEBADD = 'https://github.com/pcmin929/sb_code.git'
-        GITSSHADD = 'git@github.com:pcmin929/sb_code.git'
+        GITWEBADD = 'https://github.com/pcmin929/svel-fast-test.git'
+        GITSSHADD = 'git@github.com:pcmin929/svel-fast-test.git'
         GITCREDENTIAL = 'git_cre'
         
         DOCKERHUB = 'oolralra/test1'
