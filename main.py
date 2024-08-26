@@ -54,5 +54,5 @@ app.include_router(answer_router.router)
 async def health_check():
     return PlainTextResponse("건강합니다", status_code=200)
 
-# Wrap the FastAPI app with Mangum
-handler = Mangum(app)
+# # Wrap the FastAPI app with Mangum
+# handler = Mangum(app)
