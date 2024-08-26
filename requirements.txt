@@ -3,3 +3,4 @@ fastapi==0.112.2
 pydantic==2.8.2
 SQLAlchemy==2.0.31
 starlette==0.38.2
+uvicorn
