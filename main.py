@@ -30,7 +30,6 @@ from starlette.middleware.cors import CORSMiddleware
 from domain.answer import answer_router
 from domain.question import question_router
 from fastapi.responses import PlainTextResponse
-# from mangum import Mangum  # Import Mangum
 
 app = FastAPI()
 
@@ -53,6 +52,3 @@ app.include_router(answer_router.router)
 @app.get("/health")
 async def health_check():
     return PlainTextResponse("건강합니다", status_code=200)
-
-# # Wrap the FastAPI app with Mangum
-# handler = Mangum(app)
