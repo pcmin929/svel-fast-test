@@ -30,7 +30,7 @@ from starlette.middleware.cors import CORSMiddleware
 from domain.answer import answer_router
 from domain.question import question_router
 from fastapi.responses import PlainTextResponse
-from mangum import Mangum  # Import Mangum
+# from mangum import Mangum  # Import Mangum
 
 app = FastAPI()
 
