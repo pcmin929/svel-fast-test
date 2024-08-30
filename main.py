@@ -26,7 +26,10 @@ def run_migrations() -> None:
     command.upgrade(alembic_cfg, "head")
 
 # FastAPI 앱 생성
-app = FastAPI()
+app = FastAPI(
+    docs_url="/api/docs",   # Swagger UI의 URL 경로
+    redoc_url="/api/redoc",
+)
 
 # CORS 설정
 origins = [
@@ -47,7 +50,7 @@ app.include_router(question_router.router)
 app.include_router(answer_router.router)
 
 # 헬스체크 엔드포인트
-@app.get("/health")
+@app.get("/api/health")
 async def health_check():
     return PlainTextResponse("건강합니다", status_code=200)
 
