@@ -12,9 +12,18 @@ DB_HOST = secret_data['host']
 DB_PORT = secret_data['port']
 DB_NAME = secret_data['dbname']
 
+
+# DB_USERNAME = secret_data['username']
+# DB_PASSWORD = secret_data['password']
+# DB_HOST = secret_data['host']
+# DB_PORT = secret_data['port']
+# DB_NAME = secret_data['dbname']
+
 # SQLAlchemy 엔진 생성
 DATABASE_URL = f"mysql+pymysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+# DATABASE_URL = "mysql+pymysql://root:test1234@database-1.c5kqucccw075.ap-northeast-2.rds.amazonaws.com/db"
 os.environ['DATABASE_URL'] = DATABASE_URL
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
