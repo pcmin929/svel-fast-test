@@ -26,10 +26,7 @@ def run_migrations() -> None:
     command.upgrade(alembic_cfg, "head")
 
 # FastAPI 앱 생성
-app = FastAPI(
-    docs_url="/api/docs",   # Swagger UI의 URL 경로
-    redoc_url="/api/redoc",
-)
+app = FastAPI()
 
 # CORS 설정
 origins = [
